@@ -1,0 +1,17 @@
+.slider-container {
+    margin: 0 auto;
+    overflow-x: hidden;
+    border: 2px solid black;
+    background: black;
+    color: white;
+}
+.slider {
+    display: flex;
+    cursor: grab;
+}
+.item {
+    padding: 2rem;
+}
+.item img {
+    pointer-events: none;
+}
