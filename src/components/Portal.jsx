@@ -13,7 +13,7 @@ export default function Portal() {
   }
 
   return (
-    <div className='carousel'>
+    <div>
 
 {/* {!portalClicked ? motion.img : null} */}
       <motion.img src={PortalGif} alt="Mi gif" onClick={handleClick} className={portalClicked ? 'clicked' : ''} />
