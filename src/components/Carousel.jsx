@@ -10,7 +10,6 @@ export default function Carousel() {
   const [character, setCharacter] = useState([]);
  
 
-
   useEffect(() => {
     const movieRequest = async () => {
       const response = await fetch("https://rickandmortyapi.com/api/character");
@@ -19,9 +18,16 @@ export default function Carousel() {
     };
     movieRequest();
   }, []);
+
+
+
   return (
     
-    <motion.div className="slider-container">
+    <motion.div className="slider-container"
+
+      
+      >
+        
       <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-5420}}>
         {character.map((character) => (
           <motion.div className="item">

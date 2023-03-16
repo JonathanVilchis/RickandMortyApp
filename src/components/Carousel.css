@@ -1,4 +1,5 @@
 .slider-container {
+
     margin: 0 auto;
     overflow-x: hidden;
     border: 2px solid black;
@@ -11,7 +12,10 @@
 }
 .item {
     padding: 2rem;
+
 }
 .item img {
     pointer-events: none;
+    border-radius: 10px;
+    width: 200px;
 }
