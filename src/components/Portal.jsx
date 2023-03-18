@@ -15,7 +15,7 @@ export default function Portal() {
   return (
     <div>
 
-{/* {!portalClicked ? motion.img : null} */}
+
       <motion.img src={PortalGif} alt="Mi gif" onClick={handleClick} className={portalClicked ? 'clicked' : ''} />
 
       <motion.div
@@ -23,41 +23,10 @@ export default function Portal() {
         animate={{ opacity: portalClicked ? 1 : 0, x: portalClicked ? 0 : "-100vw" }}
         transition={{ duration: 2 }}
       >
-        <motion.div className="slider">
-          {<Carousel/>}
-    
-        </motion.div>
+         {portalClicked ?<motion.div className="slider">{<Carousel/>}</motion.div> : null} 
+ 
       </motion.div> 
     </div>
   )
 }
 
-
-
-
-// import React from 'react'
-// import PortalGif from '../assets/portal.gif'
-// import { useState } from 'react';
-// import './Portal.css';
-
-
-
-
-// export default function Portal() {
-//   const [visible, setVisible] = useState(true);
-
-//   const handleClick = () => {
-//     setVisible(false);
-  
-//   }
-
-//   return (
-//     <div>
-
-
-// <img src={PortalGif} alt="Mi gif" onClick={handleClick} className={visible ? '' : 'clicked'} />
-
-
-//     </div>
-//   )
-// }

@@ -2,9 +2,10 @@
 import './App.css'
 import Portal from './components/Portal'
 import Header from './components/Header'
-import Carousel from './components/Carousel'
-import CharacterInfo from './components/CharacterInfo'
+
 import { useState } from 'react'
+import SoundBoard from './components/SoundBoard'
+
 
 
 
@@ -16,8 +17,9 @@ function App() {
     <div className="App">
      <Header/>
      <Portal/>
-    
-    
+    <SoundBoard/>
+
+
     </div>
   )
 }

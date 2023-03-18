@@ -1,0 +1,35 @@
+
+.portal {
+    margin: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.portal img {
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
+}
+
+.portal img:hover {
+    animation: girar 2s linear infinite;
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+img {
+    width: 400px;
+}
+
+.btn-shine.playing::before {
+    
+    font-size: 20px;
+  }
