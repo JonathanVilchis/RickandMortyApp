@@ -53,7 +53,7 @@ export default function SoundBoard() {
       <div >
         {buttons.map((button, index) => (
           <button
-            
+  
             key={index}
             className={`btn-shine playing btn${index} ${isPlaying && button.soundFile === currentSound ? 'playing' : ''}`}
             onClick={() => toggleSound(button.soundFile)}

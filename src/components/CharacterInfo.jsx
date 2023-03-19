@@ -3,16 +3,18 @@ import './CharacterInfo.css'
 
 
 
-export default function CharacterInfo() {
+export default function CharacterInfo({character}) {
   const [characterInfo, setCharacterInfo] = useState([]);
   useEffect(() => {
     const movieRequest = async () => {
-      const response = await fetch("https://rickandmortyapi.com/api/character/30");
+     
+      const response = await fetch(`https://rickandmortyapi.com/api/character/${character}`);
       const data = await response.json();
       setCharacterInfo(data);
       console.log(data);
     };
     movieRequest();
+  
   }, []);
 
   
@@ -28,6 +30,7 @@ export default function CharacterInfo() {
             <p>Created: {characterInfo.created}</p>
             <p>Gender: {characterInfo.gender}</p>
         </div>
+        
     </div>
   );
 }

@@ -6,30 +6,42 @@ import { motion } from "framer-motion";
 
 
 
-export default function Carousel() {
+
+
+export default function Carousel(info) {
   const [character, setCharacter] = useState([]);
   const [button, setButton] = useState(1);
+    
+
+
+
   useEffect(() => {
     const movieRequest = async () => {
       const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${button}`);
       const data = await response.json();
       setCharacter(data.results);
+      
     };
     movieRequest();
   }, [button]);
+
+ 
   return (
     <div>
+      
       <div className="buttons">
        <button className="btn-shine" onClick={() => setButton(button - 1)}><span>PREV</span></button>
        <button className="btn-shine" onClick={() => setButton(button + 1)}><span>NEXT</span></button>
       </div>
       <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-3450}}>
         {character.map((character) => (
-          <motion.div className="item">
-            <Character key={character.id} character={character} />
+          <motion.div key={character.id} className="item">
+            <Character key={character.id}  character={character} onClick={info}/>
           </motion.div>
         ))}
       </motion.div>
+     
+     
     </div>
   );
 }
