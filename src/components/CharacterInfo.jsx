@@ -10,7 +10,7 @@ export default function CharacterInfo({character}) {
      
       const response = await fetch(`https://rickandmortyapi.com/api/character/${character}`);
       const data = await response.json();
-      setCharacterInfo(data);
+      setCharacterInfo(data); 
       console.log(data);
     };
     movieRequest();

@@ -13,22 +13,17 @@ import { useState } from 'react'
 
 
 function App() {
-  const [characterId, setCharacterId] = useState(2)
+  const [characterId, setCharacterId] = useState(null);
   const [showInfo, setShowInfo] = useState(false);
 
-  const info = () => {
+
  
-    setShowInfo(true);
-    
-    }
-
-
   return (
     <div className="App">
 
      <Header/>
-     <Portal characterId={characterId} setCharacterId={setCharacterId} info={info}/>
-     {showInfo?<CharacterInfo character={characterId} /> : null }
+     <Portal setShowInfo={setShowInfo} setCharacterId={setCharacterId}/>
+     {showInfo?<CharacterInfo character={characterId}/> : null }
      <SoundBoard/>
 
     </div>

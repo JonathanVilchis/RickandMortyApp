@@ -5,7 +5,7 @@ import "./Portal.css";
 import { motion } from "framer-motion";
 import Carousel from "./Carousel";
 
-export default function Portal(info) {
+export default function Portal({info, setShowInfo, setCharacterId}) {
   const [portalClicked, setPortalClicked] = useState(false);
 
   const handleClick = () => {
@@ -30,7 +30,7 @@ export default function Portal(info) {
         transition={{ duration: 2 }}
       >
         {portalClicked ? (
-          <motion.div className="slider">{<Carousel info={info}/>}</motion.div>
+          <motion.div className="slider">{<Carousel info={info} setShowInfo={setShowInfo} setCharacterId={setCharacterId}/>}</motion.div>
         ) : null}
       </motion.div>
     </div>

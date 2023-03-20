@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 
 
-export default function Carousel(info) {
+export default function Carousel({info, setCharacterId, setShowInfo}) {
   const [character, setCharacter] = useState([]);
   const [button, setButton] = useState(1);
     
@@ -36,7 +36,7 @@ export default function Carousel(info) {
       <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-3450}}>
         {character.map((character) => (
           <motion.div key={character.id} className="item">
-            <Character key={character.id}  character={character} onClick={info}/>
+            <Character key={character.id}  character={character} info={info} setShowInfo={setShowInfo} setCharacterId={setCharacterId} />
           </motion.div>
         ))}
       </motion.div>
