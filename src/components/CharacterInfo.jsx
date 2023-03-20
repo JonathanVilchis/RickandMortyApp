@@ -5,6 +5,8 @@ import './CharacterInfo.css'
 
 export default function CharacterInfo({character}) {
   const [characterInfo, setCharacterInfo] = useState([]);
+
+
   useEffect(() => {
     const movieRequest = async () => {
      
@@ -15,7 +17,7 @@ export default function CharacterInfo({character}) {
     };
     movieRequest();
   
-  }, []);
+  }, [character]);
 
   
   return (

@@ -1,6 +1,8 @@
 
 import './App.css'
 import Portal from './components/Portal'
+import Travel from './components/Travel'
+
 import Header from './components/Header'
 import SoundBoard from './components/SoundBoard'
 import CharacterInfo from './components/CharacterInfo'
@@ -22,9 +24,11 @@ function App() {
     <div className="App">
 
      <Header/>
-     <Portal setShowInfo={setShowInfo} setCharacterId={setCharacterId}/>
+     <Travel setShowInfo={setShowInfo} setCharacterId={setCharacterId}/>
+   
      {showInfo?<CharacterInfo character={characterId}/> : null }
-     <SoundBoard/>
+     <Portal/>
+     
 
     </div>
   )

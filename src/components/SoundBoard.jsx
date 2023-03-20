@@ -1,5 +1,4 @@
 
-import imgPortal from '../../src/assets/portal-photo.png';
 import './SoundBoard.css';
 import Sound1 from '../sounds/sound1.mp3';
 import Sound2 from '../sounds/sound2.mp3';
@@ -12,6 +11,7 @@ import Sound8 from '../sounds/sound8.mp3';
 import Sound9 from '../sounds/sound9.mp3';
 import Sound10 from '../sounds/sound10.mp3';
 import { useRef, useState } from 'react';
+import Pepino from '../../src/assets/pepino2.png'
 
 const buttons = [
   { label: 'Rick', soundFile: Sound1 },
@@ -48,7 +48,7 @@ export default function SoundBoard() {
   }
 
   return (
-    <div className="portal">
+    <div className="portal flex-container">
    
       <div >
         {buttons.map((button, index) => (
@@ -59,17 +59,18 @@ export default function SoundBoard() {
             onClick={() => toggleSound(button.soundFile)}
           >
          
-         {button.label} {isPlaying && button.soundFile === currentSound ? ' - Pausar' : ''}
+         {button.label} {isPlaying && button.soundFile === currentSound ? ' - Stop' : ''}
           </button>
         ))}
 
       </div>
       <div>
-      <img src={imgPortal} alt="portal" />
+     
       </div>
       <audio ref={audioRef}>
         <source src={currentSound} type="audio/mpeg" />
       </audio>
+      {<img className='pickle' src={Pepino} alt="pickle"></img>}
     </div>
   );
 }

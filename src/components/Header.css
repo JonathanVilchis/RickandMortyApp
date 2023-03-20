@@ -1,3 +1,25 @@
-.headerImage img{
-    width: 850px;
+.headerImage {
+    width: 1000px;
+}
+
+ .mortyAstro {
+    position: fixed;
+    width: 140px;
+    right: 200px;
+    z-index: 2;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    
+    align-content: center;
+}
+
+.rickgif {
+    position: fixed;
+    z-index: 2;
+    width: 130px;
+    left: 50px;
+    bottom: -10px;
 }

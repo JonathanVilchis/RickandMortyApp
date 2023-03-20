@@ -1,8 +1,19 @@
-
 .portal {
     margin: 200px;
     display: flex;
-    justify-content: space-between;
+    
+    box-shadow: 2px 1px 69px 14px#05e0fd;
+    -webkit-box-shadow: 2px 1px 69px 14px#05e0fd;
+    -moz-box-shadow: 2px 1px 69px 14px#05e0fd;
+    width:40%;
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+.portal button {
+   color: #05e0fd;
+   
 }
 
 .portal img {
@@ -10,7 +21,7 @@
     transition: transform 0.5s ease;
 }
 
-.portal img:hover {
+.portal .pickle:hover {
     animation: girar 2s linear infinite;
 }
 
@@ -25,11 +36,14 @@
 }
 
 
-img {
-    width: 400px;
-}
+
 
 .btn-shine.playing::before {
-    
+
     font-size: 20px;
-  }
+}
+
+.pickle {
+width: 100px;
+height: 100px;
+}

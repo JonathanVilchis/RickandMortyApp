@@ -1,4 +1,12 @@
-.clicked {
+ /* .clicked {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: none;
+  } 
+
+  */
+  
+  .clicked {
     opacity: 0;
     pointer-events: none;
     position: absolute;
@@ -9,9 +17,10 @@
     height: 400px; 
     z-index: 2;
     transition: opacity 1s ease-in-out;
+   
   }
 
-.portal-div {
-    display: flex;
-    justify-content: center;
-}
+  .travelimg img{
+    border-radius: 10px;
+  }
+

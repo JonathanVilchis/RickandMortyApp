@@ -1,13 +1,11 @@
 import React from "react";
-import PortalGif from "../assets/portal.gif";
 import { useState } from "react";
-import "./Portal.css";
+import "./Travel.css";
 import { motion } from "framer-motion";
 import Carousel from "./Carousel";
-import SoundBoard from "./SoundBoard";
+import RickAndMortyLsd from '../assets/rick-and-morty-lsd.gif';
 
-
-export default function Portal({info, setShowInfo, setCharacterId}) {
+export default function Travel ({info, setShowInfo, setCharacterId}) {
   const [portalClicked, setPortalClicked] = useState(false);
 
   const handleClick = () => {
@@ -15,9 +13,9 @@ export default function Portal({info, setShowInfo, setCharacterId}) {
   };
 
   return (
-    <div className="portal-div">
-      <motion.img
-        src={PortalGif}
+    <div className="travelimg">
+      <motion.img 
+        src={RickAndMortyLsd}
         alt="Mi gif"
         onClick={handleClick}
         className={portalClicked ? "clicked" : ""}
@@ -32,7 +30,7 @@ export default function Portal({info, setShowInfo, setCharacterId}) {
         transition={{ duration: 2 }}
       >
         {portalClicked ? (
-          <SoundBoard/>
+          <motion.div className="slider">{<Carousel info={info} setShowInfo={setShowInfo} setCharacterId={setCharacterId}/>}</motion.div>
         ) : null}
       </motion.div>
     </div>
