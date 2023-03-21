@@ -7,7 +7,7 @@ import Carousel from "./Carousel";
 import SoundBoard from "./SoundBoard";
 
 
-export default function Portal({info, setShowInfo, setCharacterId}) {
+export default function Portal() {
   const [portalClicked, setPortalClicked] = useState(false);
 
   const handleClick = () => {
@@ -24,7 +24,7 @@ export default function Portal({info, setShowInfo, setCharacterId}) {
       />
 
       <motion.div
-        className={`slider-container ${portalClicked ? "visible" : ""}`}
+        className={`slider-container soundboard ${portalClicked ? "visible" : ""}`}
         animate={{
           opacity: portalClicked ? 1 : 0,
           x: portalClicked ? 0 : "-100vw",
@@ -33,7 +33,7 @@ export default function Portal({info, setShowInfo, setCharacterId}) {
       >
         {portalClicked ? (
           <SoundBoard/>
-        ) : null}
+         ) : null}
       </motion.div>
     </div>
   );

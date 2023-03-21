@@ -1,17 +1,21 @@
 .clicked {
     opacity: 0;
     pointer-events: none;
-    position: absolute;
-    top: 75%;
-    left: 50.5%;
-    transform: translate(-50%, -50%);
+
     width: 400; 
     height: 400px; 
     z-index: 2;
     transition: opacity 1s ease-in-out;
+    display: none;
+   
   }
 
 .portal-div {
+    margin: 0 auto;
+   
+}
+
+.soundboard {
     display: flex;
     justify-content: center;
 }

@@ -11,7 +11,8 @@ import Sound8 from '../sounds/sound8.mp3';
 import Sound9 from '../sounds/sound9.mp3';
 import Sound10 from '../sounds/sound10.mp3';
 import { useRef, useState } from 'react';
-import Pepino from '../../src/assets/pepino2.png'
+import Pepinillo from '../../src/assets/pepinillo.webp'
+import Meeseeks from '../../src/assets/meeseeksSmoke.webp'
 
 const buttons = [
   { label: 'Rick', soundFile: Sound1 },
@@ -48,7 +49,7 @@ export default function SoundBoard() {
   }
 
   return (
-    <div className="portal flex-container">
+    <div className="portal">
    
       <div >
         {buttons.map((button, index) => (
@@ -70,7 +71,8 @@ export default function SoundBoard() {
       <audio ref={audioRef}>
         <source src={currentSound} type="audio/mpeg" />
       </audio>
-      {<img className='pickle' src={Pepino} alt="pickle"></img>}
+      {<img className='meeseeks' src={Meeseeks} alt="Smoking Meeseeks"></img>}
+      {<img className='pickle' src={Pepinillo} alt="pickle"></img>}
     </div>
   );
 }

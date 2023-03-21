@@ -24,8 +24,9 @@ function App() {
     <div className="App">
 
      <Header/>
+     
      <Travel setShowInfo={setShowInfo} setCharacterId={setCharacterId}/>
-   
+  
      {showInfo?<CharacterInfo character={characterId}/> : null }
      <Portal/>
      

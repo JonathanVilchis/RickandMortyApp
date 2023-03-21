@@ -27,7 +27,7 @@ export default function Carousel({info, setCharacterId, setShowInfo}) {
 
  
   return (
-    <div>
+    <div className="carousel">
       
       <div className="buttons">
        <button className="btn-shine" onClick={() => setButton(button - 1)}><span>PREV</span></button>

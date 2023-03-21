@@ -5,6 +5,7 @@
     align-items: center;
     color: white;
     text-align: justify;
+    font-size: 20px;
 }
 .character-info img {
     margin-right: 30px;

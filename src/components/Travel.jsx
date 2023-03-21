@@ -18,7 +18,7 @@ export default function Travel ({info, setShowInfo, setCharacterId}) {
         src={RickAndMortyLsd}
         alt="Mi gif"
         onClick={handleClick}
-        className={portalClicked ? "clicked" : ""}
+        className={portalClicked ? "travel" : ""}
       />
 
       <motion.div

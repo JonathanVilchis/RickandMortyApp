@@ -1,3 +1,4 @@
+import { color } from "framer-motion";
 import React from "react";
 
 export default function Character({ character, setCharacterId, setShowInfo}) {
@@ -12,7 +13,7 @@ export default function Character({ character, setCharacterId, setShowInfo}) {
 
   return (
     <div>
-      <h3 onClick={info} >{character.name}</h3>
+      <h3 className="characterName" onClick={info} >{character.name}</h3>
       <img src={character.image} />
     </div>
   );

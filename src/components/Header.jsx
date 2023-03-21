@@ -7,7 +7,7 @@ import RickGif from '../assets/rickgif.webp'
 
 export default function Header() {
   return (
-    <div >
+    <div className='header' >
       <img className='rickgif' src={RickGif} />
       <img className='headerImage' src={ImgHeader} alt="imagen" />
       <img className='mortyAstro' src={MortiAstro}/>

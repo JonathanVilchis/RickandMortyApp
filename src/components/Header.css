@@ -1,19 +1,17 @@
+.header{
+    margin-bottom: 100px;
+}
+
 .headerImage {
     width: 1000px;
 }
 
  .mortyAstro {
     position: fixed;
-    width: 140px;
+    width: 160px;
     right: 200px;
+    top: 80px;
     z-index: 2;
-}
-
-.header {
-    display: flex;
-    justify-content: space-around;
-    
-    align-content: center;
 }
 
 .rickgif {
@@ -23,3 +21,21 @@
     left: 50px;
     bottom: -10px;
 }
+
+.mortyAstro {
+  
+    animation: float 5s ease-in-out infinite;
+    
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-60px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
