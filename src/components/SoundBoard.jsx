@@ -1,5 +1,5 @@
 
-import './SoundBoard.css';
+import '../styles/SoundBoard.css';
 import Sound1 from '../sounds/sound1.mp3';
 import Sound2 from '../sounds/sound2.mp3';
 import Sound3 from '../sounds/sound3.mp3';

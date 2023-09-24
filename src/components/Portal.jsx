@@ -1,9 +1,8 @@
 import React from "react";
 import PortalGif from "../assets/portal.gif";
 import { useState } from "react";
-import "./Portal.css";
+import "../styles/Portal.css";
 import { motion } from "framer-motion";
-import Carousel from "./Carousel";
 import SoundBoard from "./SoundBoard";
 
 

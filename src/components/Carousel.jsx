@@ -1,47 +1,38 @@
+import React from "react";
+import { useState } from "react";
+import "../styles/Travel.css";
+import Characters from "./Characters";
+import RickAndMortyTravel from '../assets/rick-and-morty-travel.gif';
 
-import React, { useEffect, useState } from "react";
-import Character from "../components/Character";
-import "./Carousel.css";
-import { motion } from "framer-motion";
+export default function Carousel ({setShowInfo, setCharacterId}) {
 
+  const [portalClicked, setPortalClicked] = useState(false);
 
+  const handleClick = () => {
+    setPortalClicked(true);
+  };
 
-
-
-export default function Carousel({info, setCharacterId, setShowInfo}) {
-  const [character, setCharacter] = useState([]);
-  const [button, setButton] = useState(1);
-    
-
-
-
-  useEffect(() => {
-    const movieRequest = async () => {
-      const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${button}`);
-      const data = await response.json();
-      setCharacter(data.results);
-      
-    };
-    movieRequest();
-  }, [button]);
-
- 
   return (
-    <div className="carousel">
-      
-      <div className="buttons">
-       <button className="btn-shine" onClick={() => setButton(button - 1)}><span>PREV</span></button>
-       <button className="btn-shine" onClick={() => setButton(button + 1)}><span>NEXT</span></button>
+    <div className="traveling">
+      <img 
+        src={RickAndMortyTravel}
+        alt="gif"
+        onClick={handleClick}
+        className={portalClicked ? "travel" : ""}
+      />
+
+      <div
+        className={`slider-container ${portalClicked ? "visible" : ""}`}
+        animate={{
+          opacity: portalClicked ? 1 : 0,
+          x: portalClicked ? 0 : "-100vw",
+        }}
+        transition={{ duration: 2 }}
+      >
+        {portalClicked ? (
+          <div className="slider">{<Characters setShowInfo={setShowInfo} setCharacterId={setCharacterId}/>}</div>
+        ) : null}
       </div>
-      <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-3450}}>
-        {character.map((character) => (
-          <motion.div key={character.id} className="item">
-            <Character key={character.id}  character={character} info={info} setShowInfo={setShowInfo} setCharacterId={setCharacterId} />
-          </motion.div>
-        ))}
-      </motion.div>
-     
-     
     </div>
   );
 }

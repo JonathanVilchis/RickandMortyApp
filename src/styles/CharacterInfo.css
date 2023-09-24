@@ -3,12 +3,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
     color: white;
     text-align: justify;
     font-size: 20px;
 }
+
 .character-info img {
     margin-right: 30px;
-   border-radius: 10px;
-   
+    border-radius: 10px;
 }

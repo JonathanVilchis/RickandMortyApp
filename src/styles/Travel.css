@@ -1,0 +1,15 @@
+ .clicked {
+   opacity: 0;
+   transition: opacity 1s ease-in-out;
+   display: none;
+ }
+
+ .travel {
+   pointer-events: none;
+   display: none;
+ }
+
+ .traveling img {
+   border-radius: 10px;
+   cursor: pointer;
+ }

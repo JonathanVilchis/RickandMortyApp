@@ -1,4 +1,3 @@
-import { color } from "framer-motion";
 import React from "react";
 
 export default function Character({ character, setCharacterId, setShowInfo}) {
